@@ -28,3 +28,9 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew assembleDebug  
+          
+      - name: Upload APK
+        uses: actions/upload-artifact@v4  # 使用上傳成品的官方工具
+        with:
+          name: my-debug-apk              # 你幫這個成品取的名稱（下載時會看到）
+          path: app/build/outputs/apk/debug/app-debug.apk # APK 在雲端電腦裡的實際路徑
