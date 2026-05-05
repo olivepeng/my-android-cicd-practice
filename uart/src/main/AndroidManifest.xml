@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sharedUserId="android.uid.system"
+    android:sharedUserMaxSdkVersion="32">
+
+    <application
+        android:usesCleartextTraffic="false"
+        android:allowBackup="false"
+        android:sharedUserId="android.uid.system"
+        android:sharedUserMaxSdkVersion="32">
+
+        <service
+            android:name=".UartService"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
+</manifest>

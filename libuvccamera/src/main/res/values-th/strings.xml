@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">usb camera</string>
+    <string name="error_busy_need_replug">อุปกรณ์ถูกใช้งานแล้ว โปรดเสียบอุปกรณ์อีกครั้ง</string>
+    <string name="error_unknown_need_replug">เกิดข้อผิดพลาดที่ไม่รู้จัก โปรดเสียบอุปกรณ์อีกครั้ง.</string>
+</resources>

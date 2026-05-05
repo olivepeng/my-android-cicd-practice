@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">usb camera</string>
+    <string name="error_busy_need_replug">Enheden er optaget. Tilslut enheden igen.</string>
+    <string name="error_unknown_need_replug">Der opstod en ukendt fejl. Tilslut enheden igen.</string>
+</resources>

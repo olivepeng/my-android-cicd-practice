@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.media3:media3-extractor:1.0.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/41a2209307398a82fe49fd608c9aa38d/transformed/media3-extractor-1.0.1/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/41a2209307398a82fe49fd608c9aa38d/transformed/media3-extractor-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/41a2209307398a82fe49fd608c9aa38d/transformed/media3-extractor-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/41a2209307398a82fe49fd608c9aa38d/transformed/media3-extractor-1.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.media3/media3-extractor/1.0.1/6f4223f41e3d3f06733eb2b68c5658604f13be4f/media3-extractor-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

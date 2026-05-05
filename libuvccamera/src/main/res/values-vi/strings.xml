@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">usb camera</string>
+    <string name="error_busy_need_replug">Thiết bị đã được chiếm. Vui lòng rút và cắm lại thiết bị.</string>
+    <string name="error_unknown_need_replug">Đã xảy ra lỗi không xác định. Vui lòng rút và cắm lại thiết bị.</string>
+</resources>

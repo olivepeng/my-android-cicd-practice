@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">usb camera</string>
+    <string name="error_busy_need_replug">Perangkat sudah terpakai. Silakan cabut dan pasang perangkat kembali.</string>
+    <string name="error_unknown_need_replug">Terjadi kesalahan yang tidak diketahui. Silakan cabut dan pasang perangkat kembali.</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">usb camera</string>
+    <string name="error_busy_need_replug">장치가 사용 중입니다. 장치를 다시 연결하십시오.</string>
+    <string name="error_unknown_need_replug">알 수 없는 오류가 발생했습니다. 장치를 다시 연결하십시오.</string>
+</resources>

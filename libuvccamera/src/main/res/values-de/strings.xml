@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">usb camera</string>
+    <string name="error_busy_need_replug">Das Gerät ist belegt. Bitte stecken Sie das Gerät erneut ein.</string>
+    <string name="error_unknown_need_replug">Ein unbekannter Fehler ist aufgetreten. Bitte stecken Sie das Gerät erneut ein.</string>
+</resources>

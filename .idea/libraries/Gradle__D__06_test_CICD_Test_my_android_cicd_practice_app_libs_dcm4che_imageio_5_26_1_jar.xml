@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: D./06-test/CICD_Test/my-android-cicd-practice/app/libs/dcm4che-imageio-5.26.1.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/dcm4che-imageio-5.26.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/my-android-cicd-practice.iml" filepath="$PROJECT_DIR$/.idea/modules/my-android-cicd-practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/my-android-cicd-practice.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/my-android-cicd-practice.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app_eds200/my-android-cicd-practice.app_eds200.iml" filepath="$PROJECT_DIR$/.idea/modules/app_eds200/my-android-cicd-practice.app_eds200.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/customKeyboard/my-android-cicd-practice.customKeyboard.iml" filepath="$PROJECT_DIR$/.idea/modules/customKeyboard/my-android-cicd-practice.customKeyboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eds200unittest/my-android-cicd-practice.eds200unittest.iml" filepath="$PROJECT_DIR$/.idea/modules/eds200unittest/my-android-cicd-practice.eds200unittest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libuvccamera/my-android-cicd-practice.libuvccamera.iml" filepath="$PROJECT_DIR$/.idea/modules/libuvccamera/my-android-cicd-practice.libuvccamera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/uart/my-android-cicd-practice.uart.iml" filepath="$PROJECT_DIR$/.idea/modules/uart/my-android-cicd-practice.uart.iml" />
+    </modules>
+  </component>
+</project>

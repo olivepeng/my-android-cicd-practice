@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">usb camera</string>
+    <string name="error_busy_need_replug">Peranti ini sibuk. Sila masukkan semula peranti.</string>
+    <string name="error_unknown_need_replug">Ralat tidak diketahui berlaku. Sila plag semua peranti.</string>
+</resources>

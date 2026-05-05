@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">usb camera</string>
+    <string name="error_busy_need_replug">El dispositivo está ocupado. Por favor, vuelva a enchufar el dispositivo.</string>
+    <string name="error_unknown_need_replug">Ocurrió un error desconocido. Por favor, vuelva a enchufar el dispositivo.</string>
+</resources>

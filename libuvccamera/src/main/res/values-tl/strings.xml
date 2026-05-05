@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">usb camera</string>
+    <string name="error_busy_need_replug">Ang device ay okupado. Mangyaring isaksak muli ang device.</string>
+    <string name="error_unknown_need_replug">Nangyari ang hindi kilalang error. Mangyaring i-plug muli ang device.</string>
+</resources>

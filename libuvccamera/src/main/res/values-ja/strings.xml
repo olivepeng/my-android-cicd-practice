@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">usb camera</string>
+    <string name="error_busy_need_replug">デバイスが使用中です。デバイスを再接続してください。</string>
+    <string name="error_unknown_need_replug">不明なエラーが発生しました。デバイスを再接続してください。</string>
+</resources>

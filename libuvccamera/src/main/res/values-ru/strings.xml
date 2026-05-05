@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">usb camera</string>
+    <string name="error_busy_need_replug">Устройство занято. Пожалуйста, переподключите устройство.</string>
+    <string name="error_unknown_need_replug">Произошла неизвестная ошибка. Пожалуйста, переподключите устройство.</string>
+</resources>
