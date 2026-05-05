@@ -2,7 +2,7 @@ name: Hello CI
 on:
   push:
     branches:        # 在 push 事件下增加分支篩選
-      - main         # 只針對 main 分支觸發
+      - master         # 只針對 master 分支觸發
 
 jobs:
   say-hello:
