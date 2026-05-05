@@ -1,5 +1,8 @@
 name: Hello CI
-on: [push]
+on:
+  push:
+    branches:        # 在 push 事件下增加分支篩選
+      - main         # 只針對 main 分支觸發
 
 jobs:
   say-hello:
