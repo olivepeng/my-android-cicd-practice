@@ -4,18 +4,27 @@ on:
     branches:        # 在 push 事件下增加分支篩選
       - master         # 只針對 master 分支觸發
 
+# 新增這部分：設定全域環境變數
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4  # 第 1 步：下載你的程式碼到雲端電腦
+        uses: actions/checkout@v4
 
       - name: Set up JDK 11
-        uses: actions/setup-java@v4 # 第 2 步：安裝 Java 環境
+        uses: actions/setup-java@v4
         with:
-          java-version: '11'       # 根據你的截圖設定為 11
-          distribution: 'temurin'  # 使用常用的 Java 發行版
+          java-version: '11'
+          distribution: 'temurin'
           
-      - name: Verify Java Version
-        run: java -version         # 驗證是否安裝成功
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3 # 新增這一步：安裝 Android 開發工具
+        
+      - name: Build Debug APK
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug  
