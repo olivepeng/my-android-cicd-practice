@@ -39,4 +39,5 @@ jobs:
         with:
           api-level: 29           # 模擬器的 Android 版本
           arch: x86_64            # 使用 64 位元架構速度較快
-          script: ./gradlew connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.miis.horusendoview.UnitTest_CameraFragment
+          # 在執行指令前加上 chmod +x gradlew &&
+          script: chmod +x gradlew && ./gradlew connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.miis.horusendoview.UnitTest_DataManagementFragment
