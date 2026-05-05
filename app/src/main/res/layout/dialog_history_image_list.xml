@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="1254px"
+            android:layout_height="880px"
+            android:orientation="vertical"
+            android:background="@color/gray_47484b">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/btnLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="28px"
+                android:paddingTop="29px"
+                android:paddingStart="56px"
+                android:paddingEnd="56px"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:scrollbarSize="17px"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                android:fadeScrollbars="false"
+                android:scrollbarThumbVertical="@drawable/scrollbar_thumb_03"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnLayout"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="109px"
+                android:orientation="horizontal"
+                android:gravity="end|center_vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="@dimen/padding_16"
+                    android:text="@string/history_image_list"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_20"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:paddingStart="64px"
+                    android:paddingEnd="64px"
+                    android:paddingTop="42px"
+                    android:paddingBottom="42px"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/close" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginStart="55px"
+                android:layout_marginEnd="55px"
+                android:layout_marginBottom="28px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="81px"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"
+                    android:textSize="33px"
+                    android:textColor="@color/gray_e0e0e0"
+                    app:backgroundTint="@android:color/transparent"
+                    app:strokeColor="@color/gray_e0e0e0"
+                    app:strokeWidth="2px"
+                    app:rippleColor="@android:color/transparent"
+                    app:cornerRadius="41px"
+                    app:elevation="0dp"/>
+
+                <View
+                    android:layout_width="19px"
+                    android:layout_height="match_parent"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ok"
+                    android:layout_width="0dp"
+                    android:layout_height="81px"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/ok"
+                    android:textSize="33px"
+                    android:enabled="false"
+                    android:textColor="@color/gray_e0e0e0"
+                    app:backgroundTint="@color/btn_color_04"
+                    app:strokeColor="@color/btn_color_05"
+                    app:strokeWidth="2px"
+                    app:rippleColor="@android:color/transparent"
+                    app:cornerRadius="41px"
+                    app:elevation="0dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

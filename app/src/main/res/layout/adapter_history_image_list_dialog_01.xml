@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        tools:background="@color/gray_47484b">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="33px"
+            android:textColor="@color/gray_e0e0e0"
+            android:textStyle="bold"
+            tools:text="2020-12-08" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="29px"
+            android:background="@color/gray_e0e0e0"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37px"
+            android:layout_marginBottom="54px"
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"
+            android:clipChildren="false" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

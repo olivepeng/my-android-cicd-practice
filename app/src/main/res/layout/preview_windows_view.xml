@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/BLACK"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:layout_marginTop="16px"
+            android:layout_marginStart="@dimen/camera_fragment_divider"
+            android:layout_marginEnd="@dimen/camera_fragment_divider"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16px"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/preview_windows"
+                android:textColor="@color/gray_e0e0e0"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:paddingStart="19px"
+                android:paddingTop="19px"
+                android:paddingEnd="19px"
+                android:paddingBottom="19px"
+                android:src="@drawable/close" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="16px"
+            android:layout_marginEnd="16px"
+            android:background="@color/gray_e0e0e0"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fullImg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/camera_fragment_divider"
+                android:layout_marginBottom="76px"
+                android:adjustViewBounds="true"
+                android:scaleType="matrix"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/detailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/camera_fragment_divider"
+                    android:layout_marginEnd="@dimen/camera_fragment_divider"
+                    android:background="@color/black"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_width="328px"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/lock"
+                    android:layout_width="64px"
+                    android:layout_height="64px"
+                    android:background="@color/btn_color_08"
+                    android:src="@drawable/btn_lock"
+                    app:contentPadding="14px"
+                    app:layout_constraintBottom_toBottomOf="@id/img"
+                    app:layout_constraintEnd_toEndOf="@id/img"
+                    app:layout_constraintTop_toBottomOf="@id/img"
+                    app:shapeAppearanceOverlay="@style/circle" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fileNameTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60px"
+                    android:text="@string/file_name"
+                    android:textColor="@color/gray_808187"
+                    android:textSize="30px"
+                    app:layout_constraintEnd_toEndOf="@id/img"
+                    app:layout_constraintStart_toStartOf="@id/img"
+                    app:layout_constraintTop_toBottomOf="@id/img" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fileName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9px"
+                    android:textColor="@color/gray_e0e0e0"
+                    android:textSize="30px"
+                    app:layout_constraintEnd_toEndOf="@id/img"
+                    app:layout_constraintStart_toStartOf="@id/img"
+                    app:layout_constraintTop_toBottomOf="@id/fileNameTitle"
+                    tools:text="2021-04-01_001" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/timeTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45px"
+                    android:text="@string/time"
+                    android:textColor="@color/gray_808187"
+                    android:textSize="30px"
+                    app:layout_constraintEnd_toEndOf="@id/img"
+                    app:layout_constraintStart_toStartOf="@id/img"
+                    app:layout_constraintTop_toBottomOf="@id/fileName" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9px"
+                    android:textColor="@color/gray_e0e0e0"
+                    android:textSize="30px"
+                    app:layout_constraintEnd_toEndOf="@id/img"
+                    app:layout_constraintStart_toStartOf="@id/img"
+                    app:layout_constraintTop_toBottomOf="@id/timeTitle"
+                    tools:text="11:20 AM" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/buttonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="95px"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:paddingStart="13px"
+                android:paddingEnd="13px"
+                app:layout_constraintTop_toBottomOf="@id/detailLayout"
+                tools:layout_editor_absoluteX="15dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/full"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="20px"
+                    android:src="@drawable/icon_compare" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="20px"
+                    android:src="@drawable/history" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

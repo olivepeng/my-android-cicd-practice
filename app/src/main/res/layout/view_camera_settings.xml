@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <View
+            android:id="@+id/noTouch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/camera_fragment_divider"
+            android:paddingEnd="@dimen/camera_fragment_divider"
+            android:paddingBottom="18px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_e0e0e0" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:gravity="center">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/reset"
+                    android:layout_width="58px"
+                    android:layout_height="58px"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/adjust_reset"
+                    app:shapeAppearanceOverlay="@style/circle"
+                    app:contentPadding="5px"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:paddingStart="29px"
+                    android:paddingTop="29px"
+                    android:paddingEnd="19px"
+                    android:paddingBottom="29px"
+                    android:src="@drawable/close" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="26px"
+                        android:layout_height="26px"
+                        app:srcCompat="@drawable/colour" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12px"
+                        android:text="@string/colour"
+                        android:textColor="@color/gray_e0e0e0"
+                        android:textSize="30px" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.miis.horusendoview.widget.RulerSeekBar
+                    android:id="@+id/colourSeekBar"
+                    style="@style/SeekBar01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12px"
+                    android:layout_marginEnd="-13dp"
+                    android:layout_marginBottom="12px"
+                    android:max="2"
+                    android:min="-2"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seek_bar_progress_drawable_01" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="26px"
+                        android:layout_height="26px"
+                        app:srcCompat="@drawable/contrast" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12px"
+                        android:text="@string/contrast"
+                        android:textColor="@color/gray_e0e0e0"
+                        android:textSize="30px" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.miis.horusendoview.widget.RulerSeekBar
+                    android:id="@+id/contrastSeekBar"
+                    style="@style/SeekBar01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12px"
+                    android:layout_marginEnd="-13dp"
+                    android:layout_marginBottom="12px"
+                    android:max="2"
+                    android:min="-2"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seek_bar_progress_drawable_02" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="26px"
+                        android:layout_height="26px"
+                        app:srcCompat="@drawable/sharpness" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12px"
+                        android:text="@string/sharpness"
+                        android:textColor="@color/gray_e0e0e0"
+                        android:textSize="30px" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.miis.horusendoview.widget.RulerSeekBar
+                    android:id="@+id/sharpnessSeekBar"
+                    style="@style/SeekBar01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12px"
+                    android:layout_marginEnd="-13dp"
+                    android:layout_marginBottom="12px"
+                    android:max="2"
+                    android:min="-2"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seek_bar_progress_drawable_03" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="26px"
+                        android:layout_height="26px"
+                        app:srcCompat="@drawable/brightness" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12px"
+                        android:text="@string/brightness"
+                        android:textColor="@color/gray_e0e0e0"
+                        android:textSize="30px" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.miis.horusendoview.widget.RulerSeekBar
+                    android:id="@+id/brightnessSeekBar"
+                    style="@style/SeekBar01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12px"
+                    android:layout_marginEnd="-13dp"
+                    android:layout_marginBottom="12px"
+                    android:max="2"
+                    android:min="-2"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seek_bar_progress_drawable_02" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

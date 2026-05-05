@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_32">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold"
+                tools:text="@string/uploading_x1_files_to_x2" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_32"
+                android:paddingStart="@dimen/padding_32"
+                android:paddingEnd="@dimen/padding_32">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textColor="@color/blue_1ebbee"
+                        android:textSize="@dimen/text_size_16"
+                        tools:text="@string/x_min" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:progress="10"
+                        android:layout_marginTop="@dimen/margin_8"
+                        app:indicatorColor="@color/blue_1ebbee"
+                        app:trackColor="@color/gray_e2e2e2"
+                        app:trackCornerRadius="20dp"
+                        app:trackThickness="20dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:textColor="@color/gray_a0a0a0"
+                        android:textSize="@dimen/text_size_16"
+                        tools:text="@string/x1_mb_x2_mb" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/cancel"
+                    android:layout_width="@dimen/img_size_60"
+                    android:layout_height="@dimen/img_size_60"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_marginStart="@dimen/margin_32"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/transmission_cancel" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_16"
+                android:paddingStart="@dimen/padding_64"
+                android:paddingTop="@dimen/padding_8"
+                android:paddingEnd="@dimen/padding_64"
+                android:paddingBottom="@dimen/padding_8"
+                android:text="@string/close"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20"
+                android:visibility="invisible"
+                app:backgroundTint="@color/blue_1f3455"
+                app:cornerRadius="10dp"
+                app:strokeWidth="0dp"
+                tools:visibility="visible" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold"
+                android:text="@string/copy_files_progress_dialog_msg"
+                tools:visibility="gone"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+</layout>

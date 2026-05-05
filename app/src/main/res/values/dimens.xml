@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="preference_title_textsize">20sp</dimen>
+    <dimen name="preference_summary_textsize">18sp</dimen>
+    <dimen name="preference_icon_size">40dp</dimen>
+    <dimen name="preference_margin">5dp</dimen>
+    <dimen name="preference_title_minWidth">250dp</dimen>
+
+    <dimen name="Datamangement_textsize">20sp</dimen>
+
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="text_size_50">50sp</dimen>
+
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_64">64dp</dimen>
+
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_24">24dp</dimen>
+    <dimen name="padding_32">32dp</dimen>
+    <dimen name="padding_64">64dp</dimen>
+    <dimen name="padding_120">120dp</dimen>
+
+    <dimen name="layout_height_32">32dp</dimen>
+    <dimen name="layout_height_53">53dp</dimen>
+    <dimen name="layout_height_500">500dp</dimen>
+
+    <dimen name="layout_width_60">60dp</dimen>
+    <dimen name="layout_width_80">80dp</dimen>
+    <dimen name="layout_width_270">270dp</dimen>
+    <dimen name="layout_width_400">400dp</dimen>
+
+    <dimen name="img_size_20">20dp</dimen>
+    <dimen name="img_size_30">30dp</dimen>
+    <dimen name="img_size_40">40dp</dimen>
+    <dimen name="img_size_60">60dp</dimen>
+    <dimen name="img_size_80">80dp</dimen>
+    <dimen name="img_size_120">120dp</dimen>
+
+
+    <dimen name="mtrl_calendar_day_width">70dp</dimen>
+    <dimen name="mtrl_calendar_day_height">70dp</dimen>
+    <dimen name="mtrl_calendar_days_of_week_height">60dp</dimen>
+    <dimen name="mtrl_calendar_year_width">300dp</dimen>
+    <dimen name="mtrl_calendar_year_height">100dp</dimen>
+
+    <dimen name="preview_windows_width">452px</dimen>
+    <dimen name="camera_fragment_divider">45px</dimen>
+</resources>

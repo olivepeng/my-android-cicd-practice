@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/bg_color_01"
+        android:paddingTop="@dimen/padding_16"
+        android:paddingBottom="@dimen/padding_16"
+        android:paddingStart="@dimen/padding_16"
+        android:paddingEnd="@dimen/padding_16">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            app:buttonTint="@color/check_box_color_01" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/margin_16"
+            android:textSize="@dimen/text_size_20"
+            android:textColor="@color/check_box_color_01"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="name" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/roleImg"
+                android:layout_width="@dimen/img_size_60"
+                android:layout_height="@dimen/img_size_60"
+                android:src="@drawable/default_user_128x128"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/roleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:textSize="@dimen/text_size_20"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="roleText"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/edit"
+            android:layout_width="@dimen/img_size_60"
+            android:layout_height="@dimen/img_size_60"
+            android:src="@drawable/member_edit"
+            android:layout_marginStart="@dimen/margin_16"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/delete"
+            android:layout_width="@dimen/img_size_60"
+            android:layout_height="@dimen/img_size_60"
+            android:src="@drawable/member_delete"
+            android:layout_marginStart="@dimen/margin_16"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <com.miis.horusendoview.widget.AutoFitTextureView
+            android:id="@+id/cameraView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTips"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/_1080x1080_tips_dual_connector"
+            app:layout_constraintBottom_toBottomOf="@id/cameraView"
+            app:layout_constraintEnd_toEndOf="@id/cameraView"
+            app:layout_constraintStart_toStartOf="@id/cameraView"
+            app:layout_constraintTop_toTopOf="@id/cameraView" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_15"
+            app:layout_constraintStart_toStartOf="@id/cameraView"
+            app:layout_constraintTop_toTopOf="@id/cameraView">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/promptVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/promptVideoDot"
+                    android:layout_width="@dimen/img_size_20"
+                    android:layout_height="@dimen/img_size_20"
+                    android:src="@drawable/dot_red_f50f0a_20dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:text="@string/rec"
+                    android:textColor="@color/red_f50f0a"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/promptSnapshot"
+                android:layout_width="@dimen/img_size_20"
+                android:layout_height="@dimen/img_size_20"
+                android:src="@drawable/oval_green"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/snapshotLine"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_line5_green_3af526"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/cameraView"
+            app:layout_constraintEnd_toEndOf="@id/cameraView"
+            app:layout_constraintStart_toStartOf="@id/cameraView"
+            app:layout_constraintTop_toTopOf="@id/cameraView"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/rightLayout"
+            android:layout_width="215px"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/camera_fragment_divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/patientIdLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22px"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="6px"
+                app:cardForegroundColor="@android:color/transparent"
+                app:rippleColor="@android:color/transparent"
+                app:strokeColor="@color/gray_e0e0e0"
+                app:strokeWidth="1px">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="14px"
+                    android:paddingTop="20px"
+                    android:paddingEnd="14px"
+                    android:paddingBottom="20px">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="32px"
+                        android:layout_height="32px"
+                        android:src="@drawable/user_on_not_logging" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/patientId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10px"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/gray_e0e0e0"
+                        android:textSize="30px"
+                        android:textStyle="bold"
+                        tools:text="123456789" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:id="@+id/scope_time"
+                android:layout_width="match_parent"
+                android:layout_height="33px"
+                android:layout_marginTop="22px"
+                android:scaleType="fitXY"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/scope_4hr" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/record"
+                android:layout_width="match_parent"
+                android:layout_height="170px"
+                android:layout_marginTop="22px"
+                android:background="@drawable/bg_live_btn_01"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/recordImg"
+                    android:layout_width="105px"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/record" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/recordingTimeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recordTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color_01"
+                        android:textSize="35px"
+                        android:textStyle="bold"
+                        tools:text="00:00:00" />
+
+                    <View
+                        android:id="@+id/recordLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/text_color_01"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/maximumVideoDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color_01"
+                        android:textSize="30px"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        tools:text="00h:00m" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/snapshot"
+                android:layout_width="match_parent"
+                android:layout_height="170px"
+                android:layout_marginTop="14px"
+                android:background="@drawable/bg_live_btn_01"
+                android:padding="30px"
+                android:src="@drawable/snapshot" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnAdjust"
+                android:layout_width="match_parent"
+                android:layout_height="170px"
+                android:layout_marginTop="14px"
+                android:background="@drawable/bg_live_btn_02"
+                android:padding="30px"
+                android:src="@drawable/adjust" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnZoom"
+                android:layout_width="match_parent"
+                android:layout_height="170px"
+                android:layout_marginTop="14px"
+                android:background="@drawable/bg_live_btn_02"
+                android:padding="30px"
+                android:src="@drawable/zoom_in" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnCompare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22px"
+                android:adjustViewBounds="true"
+                android:src="@drawable/btn_compare_state_on" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14px">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btnRotate"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="15px"
+                    android:background="@drawable/bg_live_btn_02"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnRotateImg"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="35px"
+                        android:src="@drawable/rotate"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnRotateText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9px"
+                        android:textColor="@color/gray_e0e0e0"
+                        android:textSize="35px"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/_90_angle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.miis.horusendoview.widget.PreviewWindowsView
+            android:id="@+id/previewWindowsView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cameraView"
+            app:layout_constraintStart_toEndOf="@+id/rightLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <com.miis.horusendoview.widget.CameraSettingsView
+            android:id="@+id/cameraSettings"
+            android:layout_width="452px"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rightLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

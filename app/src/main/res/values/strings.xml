@@ -1,0 +1,223 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" translatable="false">Horus EndoView</string>
+
+    <string name="lang_display">English</string>
+    <string name="Wifi_Setting">Wifi Setting</string>
+<!--    <string name="version">Version_System</string>-->
+<!--    <string name="key_str_version">version_sa2</string>-->
+
+<!--    <string name="rotate">Image Rotate (Default)</string>-->
+<!--    <string name="key_str_rotate">rotate</string>-->
+
+    <string name="remark">Remark</string>
+    <string name="save">Save</string>
+
+    <!-- copying dialog -->
+<!--    <string name="str_copyingtitle">Please wait a moment.</string>-->
+<!--    <string name="str_copyingcontext">Copying...</string>-->
+<!--    <string name="str_copystop">Stop Copy</string>-->
+    <string name="str_source">Source: </string>
+    <string name="str_target">Target: </string>
+<!--    <string name="write_error">Write Permission Denied</string>-->
+<!--    <string name="str_flash_name">Internal Flash</string>-->
+<!--    <string name="str_usb1_name">USB</string>-->
+<!--    <string name="str_sdcard_name">SD Card</string>-->
+    <string name="str_copy_reminder">**The file exported by this tool is no longer encrypted.\nPlease keep the information confidential.</string>
+    <!-- copy error -->
+<!--    <string name="err_target_same">Cann\'t copy the file to the same path!</string>-->
+<!--    <string name="err_target_child">The target path is error!</string>-->
+    <string name="copy_get_file_count">Calculate the numbers of files</string>
+<!--    <string name="copy_fail">Copy Failed</string>-->
+    <string name="ok">OK</string>
+<!--    <string name="err_not_free_space">There is not enough space!</string>-->
+<!--    <string name="error_invalid_path">Invalid Path</string>-->
+<!--    <string name="copy_interrupt">netWork is disconneted, copy is interrupted</string>-->
+<!--    <string name="full">the space is full,copy files fail</string>-->
+<!--    <string name="dicom_image_only">dicom feature only supports still images</string>-->
+    <!-- copy recover dialog -->
+<!--    <string name="copy_revocer_text">  is exist, are you sure to recover?</string>-->
+<!--    <string name="copy_revocer_yes">Recover</string>-->
+<!--    <string name="copy_revocer_no">Cancel</string>-->
+
+    <!-- delete dialog-->
+<!--    <string name="delet_message">Are you sure to delete?</string>-->
+<!--    <string name="please_select_data">Please select data！</string>-->
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="confirm">Confirm</string>
+    <string name="continue_">Continue</string>
+
+    <string name="language">Language</string>
+
+<!--    <string name="default_welcome_page">Default Welcome Page</string>-->
+<!--    <string name="login_page">Login Page</string>-->
+<!--    <string name="live_view_page">Live View Page</string>-->
+
+    <string name="standby_notification_time">Standby Notification Time</string>
+    <string name="maximum_video_duration">Maximum Video Duration</string>
+
+    <string name="_10_min">10 min.</string>
+    <string name="_30_min">30 min.</string>
+    <string name="_60_min">60 min.</string>
+    <string name="_90_min">90 min.</string>
+    <string name="_120_min">120 min.</string>
+    <string name="never">Never</string>
+
+    <string name="image_rotate">Image Rotate</string>
+
+    <string name="normal">Normal</string>
+    <string name="_90_angle">90°</string>
+    <string name="_180_angle">180°</string>
+    <string name="_270_angle">270°</string>
+
+    <string name="date_and_time">Date &amp; Time</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+
+    <string name="device_info">Device Information</string>
+    <string name="serial_number_str">Serial number：%1$s</string>
+    <string name="software_version_str">Software version：V1.0-%1$s-5031.%2$2s-MI</string>
+    <string name="build_time_str">Build time：%1$s</string>
+    <string name="disk_size_str">Disk size：%1$s</string>
+    <string name="free_disk_str">Free disk：%1$s</string>
+    <string name="used_disk_str">Used disk：%1$s</string>
+    <string name="cpu_temperature_str">CPU temperature：%1$s℃</string>
+    <string name="export_to_02">Export to：</string>
+
+    <string name="dialog_shut_down_msg">Are you sure you want to shut down？</string>
+    <string name="sleep">Sleep</string>
+    <string name="shut_down">Shut down</string>
+
+    <string name="standby_notification_time_dialog_msg_01">The system will be in sleep mode after &lt;font color="#ff0000"&gt;%1$s seconds&lt;/font&gt;</string>
+<!--    <string name="standby_notification_time_dialog_msg_02">The system will be in sleep mode after </string>-->
+    <string name="image_capture_timeout_msg">Image dequeuing took too long</string>
+    <string name="rec">REC</string>
+    <string name="continue_recording">Do you want to continue recording? </string>
+    <string name="colour">Color</string>
+    <string name="brightness">Brightness</string>
+    <string name="contrast">Contrast</string>
+    <string name="sharpness">Sharpness</string>
+    <string name="disk_space_not_enough">Disk space not enough!</string>
+    <string name="preview_windows">Preview Windows</string>
+    <string name="file_name">File Name</string>
+    <string name="history_image_list">History image list</string>
+    <string name="select_all">Select all</string>
+    <string name="unselect_all">Unselect all</string>
+    <string name="all">All</string>
+    <string name="today">Today</string>
+    <string name="select_a_date_range">Select a date range</string>
+    <string name="do_you_want_to_delete">Do you want to delete?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="patient_profile">Patient Profile</string>
+    <string name="id">ID</string>
+    <string name="visit_date">Visit date</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="basic_export">Basic export</string>
+    <string name="usb_export">USB export</string>
+    <string name="dicom_export">DICOM export</string>
+    <string name="sd_card">SD Card</string>
+    <string name="usb">USB</string>
+    <string name="uploading_x1_files_to_x2">Uploading %1$s files to %2$s</string>
+    <string name="copy_files_progress_dialog_msg">**The file exported by this tool is no longer encrypted. Please keep the information confidential.</string>
+    <string name="x_min">%1$s min</string>
+    <string name="x_sec">%1$s sec</string>
+    <string name="x1_mb_x2_mb">%1$s MB / %2$s MB</string>
+    <string name="close">Close</string>
+    <string name="complete">Complete</string>
+    <string name="fail">Fail</string>
+    <string name="date_time_display_formate">Date Time Display Format</string>
+    <string name="_12_hours">12 Hours</string>
+    <string name="_24_hours">24 Hours</string>
+    <string name="screen_auto_rotate">Screen Auto Rotate</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="x1_gb">%1$s GB</string>
+    <string name="ch_number">Ch%1$d</string>
+    <string name="add_user">Add User</string>
+    <string name="delete_selected_users">Delete Selected Users</string>
+    <string name="advanced_user">User</string>
+    <string name="admin_user">Admin User</string>
+    <string name="service_user">Service User</string>
+    <string name="warning">Warning</string>
+    <string name="are_you_sure_delete_it">Are you sure delete it ?</string>
+    <string name="user">User</string>
+    <string name="type">Type</string>
+    <string name="type_02">*Type</string>
+    <string name="account">Account</string>
+    <string name="account_02">*Account</string>
+    <string name="password_02">*Password</string>
+    <string name="repeat_password">*Repeat Password</string>
+    <string name="create">Create</string>
+    <string name="account_is_required">Account is required.</string>
+    <string name="password_is_required">Password is required.</string>
+    <string name="repeat_password_is_required">Repeat Password is required.</string>
+    <string name="repeat_password_is_incorrect">Repeat Password is incorrect.</string>
+    <string name="account_is_existed">Account is existed.</string>
+    <string name="login">Login</string>
+    <string name="remember_your_account">Remember your Account</string>
+    <string name="login_failed">Login Failed</string>
+    <string name="login_failed_msg">The account or password you entered is incorrect.\nPlease try again</string>
+    <string name="logout">Logout</string>
+    <string name="change_password">Change Password</string>
+    <string name="old_password">*Old Password</string>
+    <string name="new_password">*New Password</string>
+    <string name="confirm_password">*Confirm Password</string>
+    <string name="old_password_is_incorrect">Old Password is incorrect.</string>
+    <string name="old_password_is_required">Old Password is required.</string>
+    <string name="confirm_password_is_required">Confirm Password is required.</string>
+    <string name="confirm_password_is_incorrect">Confirm Password is incorrect.</string>
+    <string name="info">Info</string>
+    <string name="change_password_success">Change password success!</string>
+    <string name="change_password_fail">Change password fail!</string>
+    <string name="please_patient_id">Please Enter Patient ID</string>
+    <string name="patient_id">Patient ID</string>
+    <string name="please_enter_zip_file_password">Please Enter Zip File Password</string>
+    <string name="automatically_delete_files">Automatically Delete Files</string>
+    <string name="_1_day">1 day</string>
+    <string name="_7_days">7 days</string>
+    <string name="_30_days">30 days</string>
+    <string name="xx_battery_remaining">%1$s%% battery remaining</string>
+    <string name="sw_upgrading">Firmware Update</string>
+    <string name="update">Update</string>
+    <string name="dialog_battery_5_shutdown_msg_01">The system will be in shutdown after &lt;font color="#ff0000"&gt;%1$s seconds&lt;/font&gt;</string>
+    <string name="disk_insufficiency_30_msg">Internal hard drive space is less than 30%.\nDo you want to manually delete files?</string>
+    <string name="disk_insufficiency_20_msg">Internal hard drive space is less than 20%.\nDo you want to automatically delete files?</string>
+    <string name="export_usb_not_chose_files_msg">Please chose files or folders first for export to USB</string>
+    <string name="select_backup_file">Select backup file</string>
+    <string name="restore_data_success">Restore data success</string>
+    <string name="restore_data_fail">Restore data fail</string>
+
+    <string name="error_msg1000">Battery cannot be charged.</string>
+    <string name="error_msg2000">No signal when endoscope inserted.</string>
+    <string name="error_msg3000">External USB memory full.</string>
+    <string name="error_msg4000">CPU over temperature.</string>
+    <string name="error_msg5000">Out of storage memory. \nOnce the memory capacity reach 80%, the system will start to delete the oldest files automatically. \nWould you like to delete the files by manually?</string>
+    <string name="error_msg6000">Maintenance notification when endoscope connector over 9,000 usage times</string>
+    <string name="export_log">Export Log</string>
+    <string name="export">Export</string>
+    <string name="msg_connect_usb">Please connect the USB flash drive.</string>
+
+    <string name="msg_dicom_image_only">The dicom function only supports images, please do not select video files.</string>
+
+    <string name="msg_system_upgrade_warning1">Please put the \"SystemUpgrade.zip\" file into the USB flash drive.</string>
+
+    <string name="fat_warn">The upgrade function only supports FAT32 USB flash drives, please format it to fat</string>
+    <string name="password_failed_msg">The password you entered is incorrect.\nPlease try again</string>
+
+    <string name="msg_stop_recording">Currently still in recording,\nDo you want to stop recording?</string>
+
+    <string name="unavailable">Unavailable</string>
+    <string name="msg_engineering_pw">Please enter the engineering mode password</string>
+    <string name="mcu_fw">MCU FW: %1$s</string>
+
+    <string name="password_rule">The password is too weak.\n\n1.\tThe password must be at least 8 characters long.\n2.\tIt must include at least one letter (A-Z or a-z).\n3.\tIt must include at least one number (0-9).\nPlease ensure your password meets all of the above criteria.\n\nAnd please enter a strong password.</string>
+    <string name="no_file_found">No file found.</string>
+
+    <string name="dicom_1folder_msg">Only one folder can be selected for DICOM export. Please select a single folder and try again.</string>
+    <string name="sleep_uncharged_msg">The sleep function is only available when the device is unchanged.</string>
+
+</resources>

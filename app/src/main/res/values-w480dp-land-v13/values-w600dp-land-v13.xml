@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mtrl_calendar_day_width">70dp</dimen>
+    <dimen name="mtrl_calendar_day_height">70dp</dimen>
+    <dimen name="mtrl_calendar_days_of_week_height">60dp</dimen>
+</resources>

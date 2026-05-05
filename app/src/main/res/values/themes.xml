@@ -1,0 +1,115 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Sa2_android" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/gray_47484b</item>
+        <item name="colorPrimaryVariant">@color/gray_47484b</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/gray_47484b</item>
+        <item name="colorSecondaryVariant">@color/gray_47484b</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/white</item>
+        <!-- Customize your theme here. -->
+
+        <item name="materialCalendarTheme">@style/MyDatePicker</item>
+        <item name="materialTimePickerTheme">@style/MyTimePicker</item>
+    </style>
+
+    <style name="DateTimeDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textSize">20sp</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">95%</item>
+    </style>
+
+    <style name="SeekBar01" parent="Widget.AppCompat.SeekBar">
+        <item name="android:background">@null</item>
+        <item name="android:splitTrack">false</item>
+        <item name="android:thumb">@drawable/seek_bar_01_thumb</item>
+    </style>
+
+    <style name="MyDatePicker" parent="ThemeOverlay.Material3.MaterialCalendar">
+        <!--        https://github.com/material-components/material-components-android/blob/master/docs/components/DatePicker.md-->
+        <!--        <item name="colorPrimary">@color/shrine_pink_100</item>-->
+        <!--        <item name="colorOnPrimary">@color/shrine_pink_900</item>-->
+        <!--        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>-->
+        <!--        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>-->
+        <!-- Customize text field of the text input mode. -->
+        <!--        <item name="textInputStyle">@style/Widget.App.TextInputLayout</item>-->
+
+        <item name="materialCalendarHeaderTitle">@style/myMaterialCalendarHeaderTitle</item>
+        <item name="materialCalendarYearNavigationButton">
+            @style/myMaterialCalendarYearNavigationButton
+        </item>
+        <item name="materialCalendarMonthNavigationButton">
+            @style/myMaterialCalendarMonthNavigationButton
+        </item>
+        <item name="materialCalendarDay">@style/myMaterialCalendarDay</item>
+        <item name="materialCalendarDayOfWeekLabel">@style/myMaterialCalendarDayOfWeekLabel</item>
+        <item name="buttonBarPositiveButtonStyle">
+            @style/myMaterialCalendarButtonBarPositiveButtonStyle
+        </item>
+        <item name="buttonBarNegativeButtonStyle">
+            @style/myMaterialCalendarButtonBarNegativeButtonStyle
+        </item>
+    </style>
+
+    <style name="myMaterialCalendarHeaderTitle" parent="Widget.Material3.MaterialCalendar.HeaderTitle">
+        <!--        https://material.io/blog/migrating-material-3   -->
+        <item name="android:textAppearance">?attr/textAppearanceTitleLarge</item>
+        <!--        <item name="android:textColor">@color/yellow_f5d60d</item>-->
+        <item name="autoSizeMaxTextSize">30sp</item>
+    </style>
+
+    <style name="myMaterialCalendarYearNavigationButton" parent="Widget.Material3.MaterialCalendar.YearNavigationButton">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+
+    <style name="myMaterialCalendarMonthNavigationButton" parent="Widget.MaterialComponents.MaterialCalendar.MonthNavigationButton">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="myMaterialCalendarDay" parent="Widget.MaterialComponents.MaterialCalendar.DayTextView">
+        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>
+    </style>
+
+    <style name="myMaterialCalendarDayOfWeekLabel" parent="Widget.MaterialComponents.MaterialCalendar.DayOfWeekLabel">
+        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>
+    </style>
+
+    <style name="myMaterialCalendarButtonBarPositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="myMaterialCalendarButtonBarNegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="MyTimePicker" parent="ThemeOverlay.Material3.MaterialTimePicker">
+        <item name="borderlessButtonStyle">@style/myTimePickerBorderlessButton</item>
+    </style>
+
+    <style name="myTimePickerBorderlessButton" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="myListPopupWindowStyle" parent="Widget.Material3.PopupMenu.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/custom_popup_background</item>
+    </style>
+
+    <style name="circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

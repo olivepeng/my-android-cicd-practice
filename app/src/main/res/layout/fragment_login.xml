@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_f5f5f5">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:rippleColor="@android:color/transparent"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/gray_e2e2e2"
+            app:strokeWidth="1dp"
+            app:cardCornerRadius="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/padding_120"
+                android:paddingEnd="@dimen/padding_120"
+                android:paddingTop="@dimen/padding_64"
+                android:paddingBottom="@dimen/padding_32">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/layout_width_400"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_32"
+                    app:cardBackgroundColor="@color/gray_e2e2e2"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionDone"
+                        android:inputType="text|textEmailAddress"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_8"
+                        android:textSize="@dimen/text_size_20" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/layout_width_400"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_32"
+                    app:cardBackgroundColor="@color/gray_e2e2e2"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/password"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:padding="@dimen/padding_8"
+                            android:textSize="@dimen/text_size_20" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/passwordEye"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/padding_6"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/eye_off"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/remember"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/rememberSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:background="@android:color/transparent"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:thumb="@drawable/ex1_switch_thumb"
+                        app:thumbTint="@null"
+                        app:track="@drawable/ex1_switch_track"
+                        app:trackTint="@null" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:layout_weight="1"
+                        android:text="@string/remember_your_account"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_20" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_20"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/login"
+                    app:cornerRadius="5dp"
+                    app:strokeWidth="0dp"
+                    app:backgroundTint="@color/gray_626367"
+                    app:rippleColor="@android:color/transparent"
+                    app:elevation="0dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white_f5f5f5"
+            android:layout_marginStart="@dimen/margin_16"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_50"
+            android:padding="@dimen/padding_4"
+            app:layout_constraintBottom_toTopOf="@+id/materialCardView01"
+            app:layout_constraintStart_toStartOf="@+id/materialCardView01"
+            app:layout_constraintTop_toTopOf="@+id/materialCardView01" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
