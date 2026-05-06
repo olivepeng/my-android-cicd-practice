@@ -30,6 +30,8 @@ import com.miis.horusendoview.roomDataBase.MyRoomDatabase;
 import com.miis.horusendoview.roomDataBase.userTbData.UserTbData;
 import com.miis.horusendoview.type.UserRoleType;
 
+import net.sqlcipher.database.SQLiteDatabase;
+
 import java.io.File;
 import java.util.Locale;
 import java.util.UUID;
@@ -107,19 +109,36 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+		
+		// 1. 偵測是否為 Robolectric 環境
+        boolean isRobolectric = "robolectric".equals(android.os.Build.FINGERPRINT);
+
 
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }
 
         Timber.d("onCreate");
+		
+		// 2. 只有非測試環境才載入 SQLCipher 原生庫
+        if (!isRobolectric) {
+            SQLiteDatabase.loadLibs(this);
+        }
+
 
         workHandlerThread = new HandlerThread(MyApplication.class.getSimpleName() + "_workHandlerThread");
         workHandlerThread.start();
         setWorkHandler(new Handler(workHandlerThread.getLooper()));
 
 
-        setMainDirPath(Environment.getExternalStoragePublicDirectory(FOLDER_NAME).getAbsolutePath());
+        //setMainDirPath(Environment.getExternalStoragePublicDirectory(FOLDER_NAME).getAbsolutePath());
+		// 3. 處理路徑問題：測試環境通常無法存取 ExternalStoragePublicDirectory
+        if (isRobolectric) {
+            setMainDirPath(getFilesDir().getAbsolutePath());
+        } else {
+            setMainDirPath(Environment.getExternalStoragePublicDirectory(FOLDER_NAME).getAbsolutePath());
+        }
+
 
         SharedPreferencesManager.getInstance().setMyApplication(this);
 

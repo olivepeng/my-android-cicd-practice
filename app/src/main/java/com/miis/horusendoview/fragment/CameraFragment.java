@@ -2111,7 +2111,10 @@ public final class CameraFragment extends Fragment implements View.OnClickListen
             public void run() {
                 FragmentCameraBinding binding = getBinding();
                 if (binding != null) {
-                    //if (isShow) {
+                    if (iCameraHelper == null) {
+                        Timber.w("[setIvTipsShow] iCameraHelper == null");
+                        return;
+                    }
                     if ((isShow) && !iCameraHelper.isCameraOpened()) {// JerryLin
                         binding.ivTips.setVisibility(View.VISIBLE);
 

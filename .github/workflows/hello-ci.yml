@@ -20,32 +20,11 @@ jobs:
         with:
           java-version: '17'        # 將這裡從 '11' 改為 '17'
           distribution: 'temurin'
-          
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3 # 新增這一步：安裝 Android 開發工具
-        
- #     - name: Build Debug APK
- #       run: |
- #         chmod +x gradlew
- #         ./gradlew assembleDebug  
- #         
- #     - name: Upload APK
- #       uses: actions/upload-artifact@v4  # 使用上傳成品的官方工具
- #       with:
- #         name: my-debug-apk              # 你幫這個成品取的名稱（下載時會看到）
- #         path: app/build/outputs/apk/debug/app-debug.apk # APK 在雲端電腦裡的實際路徑
-      - name: Run Android Instrumented Tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 30
-          target: aosp_atd               # 關鍵！換成專門跑測試的瘦身版映像檔
-          arch: x86_64
-          force-avd-creation: false
-          disable-animations: true
-          emulator-options: -no-window -gpu swiftshader_indirect -no-audio -no-boot-anim -camera-back none -camera-front none -memory 2048
-          # ^ 我們手動限制模擬器的記憶體為 2GB，避免把雲端主機擠爆
-          script: |
-            # 先確認 adb 連線穩定
-            adb wait-for-device
-            chmod +x gradlew
-            ./gradlew connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.miis.horusendoview.UnitTest_DataManagementFragment
+          cache: gradle
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    - name: Run Unit Tests
+      # 跑你剛才在 Android Studio 跑的那個 task
+      run: ./gradlew testDebugUnitTest

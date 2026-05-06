@@ -92,22 +92,37 @@ public abstract class MyRoomDatabase extends RoomDatabase {
     public static synchronized MyRoomDatabase getDatabase(@NonNull Context context) {
         synchronized (instanceLock) {
             if (instance == null || !instance.isOpen()) {
-                MyApplication myApplication = (MyApplication) context.getApplicationContext();
+                Context appContext = context.getApplicationContext();
+                boolean isRobolectric = "robolectric".equals(android.os.Build.FINGERPRINT);
 
-                File dbFile = new File(myApplication.getMainDirPath() + File.separator + DBNAME);
+                Builder<MyRoomDatabase> databaseBuilder;
 
-                if (dbFile.getParentFile() != null && !dbFile.getParentFile().exists()) {
-                    try {
-                        dbFile.getParentFile().mkdirs();
-                    } catch (Exception e) {
-                        Timber.e(e);
+                if (isRobolectric) {
+                    // 實務做法：測試環境直接使用「記憶體資料庫」
+                    // 優點：不用處理檔案路徑、不用 SQLCipher、跑起來極快
+                    databaseBuilder = Room.inMemoryDatabaseBuilder(appContext, MyRoomDatabase.class);
+                } else {
+
+                    MyApplication myApplication = (MyApplication) context.getApplicationContext();
+
+                    File dbFile = new File(myApplication.getMainDirPath() + File.separator + DBNAME);
+
+                    if (dbFile.getParentFile() != null && !dbFile.getParentFile().exists()) {
+                        try {
+                            dbFile.getParentFile().mkdirs();
+                        } catch (Exception e) {
+                            Timber.e(e);
+                        }
                     }
+
+                    databaseBuilder = Room.databaseBuilder(appContext, MyRoomDatabase.class, dbFile.getAbsolutePath());
+
+                    // 只有正式環境才掛載加密工廠 (SupportFactory)
+                    // 這行是造成 UnsatisfiedLinkError 的元兇，在測試環境必須避開
+                    databaseBuilder.openHelperFactory(new SupportFactory(SQLiteDatabase.getBytes("111".toCharArray())));
                 }
 
-                Builder<MyRoomDatabase> databaseBuilder = Room.databaseBuilder(
-                        context,
-                        MyRoomDatabase.class,
-                        dbFile.getAbsolutePath())
+                databaseBuilder
                         .addCallback(new Callback() {
                             @Override
                             public void onCreate(@NonNull SupportSQLiteDatabase db) {
@@ -130,12 +145,13 @@ public abstract class MyRoomDatabase extends RoomDatabase {
                         .setJournalMode(JournalMode.TRUNCATE)
                         .allowMainThreadQueries()
                         .enableMultiInstanceInvalidation()
-                        .fallbackToDestructiveMigration()
-                        .openHelperFactory(new SupportFactory(SQLiteDatabase.getBytes("111".toCharArray())));
+                        .fallbackToDestructiveMigration();
 
                 instance = databaseBuilder.build();
-                instance.myApplication = (MyApplication) context.getApplicationContext();
-    //            Timber.d("getDatabase DBPath=" + instance.getOpenHelper().getWritableDatabase().getPath());
+				// 安全轉型處理 MyApplication
+                if (appContext instanceof MyApplication) {
+                    instance.myApplication = (MyApplication) appContext;
+                }    //            Timber.d("getDatabase DBPath=" + instance.getOpenHelper().getWritableDatabase().getPath());
             }
 
             Timber.d("getDatabase isOpen=%s", instance.isOpen());
