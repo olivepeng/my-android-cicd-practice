@@ -38,10 +38,14 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
-          target: google_apis           # 使用 Google APIs 映像檔通常比純 AOSP 穩定
+          target: aosp_atd               # 關鍵！換成專門跑測試的瘦身版映像檔
           arch: x86_64
-          disable-animations: true      # 關閉動畫，避免 UI 測試時因為延遲而失敗
           force-avd-creation: false
-          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
-          # ^ 這些參數能極大化節省 CPU 資源：不顯示視窗、不播放聲音、不跑開機動畫
-          script: chmod +x gradlew && ./gradlew connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.miis.horusendoview.UnitTest_DataManagementFragment
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -no-audio -no-boot-anim -camera-back none -camera-front none -memory 2048
+          # ^ 我們手動限制模擬器的記憶體為 2GB，避免把雲端主機擠爆
+          script: |
+            # 先確認 adb 連線穩定
+            adb wait-for-device
+            chmod +x gradlew
+            ./gradlew connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.miis.horusendoview.UnitTest_DataManagementFragment
