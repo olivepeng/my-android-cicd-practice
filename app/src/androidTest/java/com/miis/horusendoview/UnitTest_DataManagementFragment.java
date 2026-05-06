@@ -248,8 +248,21 @@ public class UnitTest_DataManagementFragment {
     @Test
     //T4U2-4
     public void UnitTestVideoPlay() throws Exception{
-		// 如果偵測到是在模擬器運行，就自動跳過這個測試，不報錯
-    Assume.assumeFalse("Skipping test on emulator due to missing hardware", Build.FINGERPRINT.contains("generic"));
+	// 檢查多個特徵，只要其中一個對上，就判定為模擬器並跳過
+boolean isEmulator = Build.FINGERPRINT.startsWith("generic")
+        || Build.FINGERPRINT.startsWith("unknown")
+        || Build.MODEL.contains("google_sdk")
+        || Build.MODEL.contains("Emulator")
+        || Build.MODEL.contains("Android SDK built for x86")
+        || Build.MANUFACTURER.contains("Genymotion")
+        || Build.PRODUCT.contains("sdk_google")
+        || Build.PRODUCT.contains("google_sdk")
+        || Build.PRODUCT.contains("sdk")
+        || Build.PRODUCT.contains("sdk_x86")
+        || Build.PRODUCT.contains("vbox86p")
+        || Build.DEVICE.contains("generic");
+
+Assume.assumeFalse("在模擬器環境下跳過硬體測試", isEmulator);
 	
         final int Number_of_tests= 5;
         //removeAllFiles();
