@@ -59,6 +59,8 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 
 import timber.log.Timber;
+import org.junit.Assume;
+import android.os.Build;
 
 /**
  * Instrumented test, which will execute on an Android device.
