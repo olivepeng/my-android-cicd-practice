@@ -37,7 +37,8 @@ jobs:
       - name: Run Android Instrumented Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 29           # 模擬器的 Android 版本
+          api-level: 30           # 模擬器的 Android 版本
           arch: x86_64            # 使用 64 位元架構速度較快
+          disable-animations: true # 額外建議：關閉動畫可以讓模擬器跑得更順，減少超時錯誤
           # 在執行指令前加上 chmod +x gradlew &&
           script: chmod +x gradlew && ./gradlew connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.miis.horusendoview.UnitTest_DataManagementFragment
