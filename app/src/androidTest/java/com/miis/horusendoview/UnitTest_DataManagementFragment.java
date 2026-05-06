@@ -246,6 +246,9 @@ public class UnitTest_DataManagementFragment {
     @Test
     //T4U2-4
     public void UnitTestVideoPlay() throws Exception{
+		// 如果偵測到是在模擬器運行，就自動跳過這個測試，不報錯
+    Assume.assumeFalse("Skipping test on emulator due to missing hardware", Build.FINGERPRINT.contains("generic"));
+	
         final int Number_of_tests= 5;
         //removeAllFiles();
 
